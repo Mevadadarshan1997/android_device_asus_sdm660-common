@@ -150,7 +150,7 @@ ro.com.google.rlz_ap_whitelist=y0,y5,y6,y7,y9
 debug.cpurend.vsync=false
 debug.renderengine.backend=threaded
 ro.hardware.egl=adreno
-ro.hardware.vulkan=adreno
+ro.hardware.vulkan=sdm660
 
 # HEH filename encryption is being dropped
 ro.crypto.volume.filenames_mode=aes-256-cts
