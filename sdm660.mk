@@ -213,6 +213,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0.vendor
 
+# Libshims
+PRODUCT_PACKAGES += \
+    fakelogprint
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.asus_sdm660
