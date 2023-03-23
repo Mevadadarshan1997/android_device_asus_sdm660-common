@@ -8,7 +8,11 @@ COMMON_PATH := device/asus/sdm660-common
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+RELAX_USES_LIBRARY_CHECK := true
 
+# Never Allows
+
+SELINUX_IGNORE_NEVERALLOWS := true
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -71,22 +75,22 @@ BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
 
 ifeq ($(CUSTOM_CLANG),true)
-<<<<<<< HEAD
-TARGET_KERNEL_CLANG_VERSION := r450784d
-<<<<<<< HEAD
-TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r450784d
-<<<<<<< HEAD
-=======
+
+#TARGET_KERNEL_CLANG_VERSION := r450784d
+
+#TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r450784d
+
+
 TARGET_KERNEL_CLANG_VERSION := cosmic
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-cosmic
->>>>>>> parent of af6b2c6 (sdm660-common : change to TARGET_KERNEL_CLANG_VERSION := r450784d)
-=======
-TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-cosmic
->>>>>>> parent of c7c6424 ([temp]sdm660-common : Disabled TARGET_KERNEL_ADDITIONAL_FLAGS)
+
+
+#TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-cosmic
+
 TARGET_KERNEL_ADDITIONAL_FLAGS := AR=llvm-ar AS=llvm-as NM=llvm-nm LD=ld.lld OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump OBJSIZE=llvm-size READELF=llvm-readelf STRIP=llvm-strip HOSTAR=llvm-ar HOSTAS=llvm-as HOSTNM=llvm-nm HOSTLD=ld.lld
-=======
+
 #TARGET_KERNEL_ADDITIONAL_FLAGS := AR=llvm-ar AS=llvm-as NM=llvm-nm LD=ld.lld OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump OBJSIZE=llvm-size READELF=llvm-readelf STRIP=llvm-strip HOSTAR=llvm-ar HOSTAS=llvm-as HOSTNM=llvm-nm HOSTLD=ld.lld
->>>>>>> parent of 7ac536d (Update BoardConfigCommon.mk)
+
 endif
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
@@ -168,10 +172,10 @@ PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 # Treble
 BOARD_VNDK_VERSION := current
 
-<<<<<<< HEAD
+
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2020-12-05
-=======
+
 # Shims
 TARGET_LD_SHIM_LIBS := vendor/lib/hw/audio.primary.atoll.so|fakelogprint.so
 
