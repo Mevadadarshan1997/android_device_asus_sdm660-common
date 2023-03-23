@@ -74,8 +74,8 @@ BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
 
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r450784d1
-TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r450784d1
+TARGET_KERNEL_CLANG_VERSION := proton
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton
 TARGET_KERNEL_LLVM_BINUTILS := false
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
