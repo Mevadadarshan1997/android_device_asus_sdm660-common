@@ -74,7 +74,7 @@ BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
 
 TARGET_KERNEL_CLANG_COMPILE := true
-
+KERNEL_CUSTOM_LLVM := true
 
 
 
