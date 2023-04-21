@@ -76,6 +76,7 @@ void NFC_check()
         property_override("ro.boot.product.hardware.sku", "NFC");
     } else
         property_override("ro.hq.support.nfc", "0");
+        property_override("ro.treble.enabled", "false");
 }
 
 void vendor_load_properties()
